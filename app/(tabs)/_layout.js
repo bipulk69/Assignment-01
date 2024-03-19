@@ -1,17 +1,19 @@
 import { Tabs } from "expo-router";
 import { Feather } from "@expo/vector-icons";
+import { View, StyleSheet } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export default function Layout() {
   return (
-    <Tabs>
+    <Tabs tabBarStyle={styles.tabBar}>
       <Tabs.Screen
         name="home"
         options={{
-          tabBarLabel: "home",
+          tabBarLabel: "",
           headerShown: false,
           tabBarIcon: ({ focused }) => {
-            focused ? (
+            return focused ? (
               <Feather name="home" size={24} color="#0075FF" />
             ) : (
               <Feather name="home" size={24} color="#6C6C74" />
@@ -23,13 +25,13 @@ export default function Layout() {
       <Tabs.Screen
         name="contacts"
         options={{
-          tabBarLabel: "contacts",
+          tabBarLabel: "",
           headerShown: false,
           tabBarIcon: ({ focused }) => {
-            focused ? (
-              <Feather name="home" size={24} color="#0075FF" />
+            return focused ? (
+              <AntDesign name="contacts" size={24} color="#0075FF" />
             ) : (
-              <Feather name="home" size={24} color="#6C6C74" />
+              <AntDesign name="contacts" size={24} color="#6C6C74" />
             );
           },
         }}
@@ -38,13 +40,13 @@ export default function Layout() {
       <Tabs.Screen
         name="post"
         options={{
-          tabBarLabel: "post",
+          tabBarLabel: "",
           headerShown: false,
           tabBarIcon: ({ focused }) => {
-            focused ? (
-              <Feather name="home" size={24} color="#0075FF" />
+            return focused ? (
+              <AntDesign name="pluscircle" size={42} color="black" />
             ) : (
-              <Feather name="home" size={24} color="#6C6C74" />
+              <AntDesign name="pluscircle" size={42} color="black" />
             );
           },
         }}
@@ -53,13 +55,13 @@ export default function Layout() {
       <Tabs.Screen
         name="inbox"
         options={{
-          tabBarLabel: "inbox",
+          tabBarLabel: "",
           headerShown: false,
           tabBarIcon: ({ focused }) => {
-            focused ? (
-              <Feather name="home" size={24} color="#0075FF" />
+            return focused ? (
+              <AntDesign name="message1" size={24} color="#0075ff" />
             ) : (
-              <Feather name="home" size={24} color="#6C6C74" />
+              <AntDesign name="message1" size={24} color="#6c6c74" />
             );
           },
         }}
@@ -68,13 +70,21 @@ export default function Layout() {
       <Tabs.Screen
         name="profile"
         options={{
-          tabBarLabel: "profile",
+          tabBarLabel: "",
           headerShown: false,
           tabBarIcon: ({ focused }) => {
-            focused ? (
-              <Feather name="home" size={24} color="#0075FF" />
+            return focused ? (
+              <MaterialCommunityIcons
+                name="face-man-profile"
+                size={24}
+                color="#0075ff"
+              />
             ) : (
-              <Feather name="home" size={24} color="#6C6C74" />
+              <MaterialCommunityIcons
+                name="face-man-profile"
+                size={24}
+                color="#6c6c74"
+              />
             );
           },
         }}
@@ -82,3 +92,5 @@ export default function Layout() {
     </Tabs>
   );
 }
+
+const styles = StyleSheet.create({});
