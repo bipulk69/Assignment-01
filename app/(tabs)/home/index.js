@@ -1,46 +1,137 @@
-import { Image, Pressable, Text, View } from "react-native";
 import React from "react";
-import { Fontisto } from "@expo/vector-icons";
+import { Image, Pressable, ScrollView, Text, View } from "react-native";
+import { AntDesign, Fontisto } from "@expo/vector-icons";
 
 const index = () => {
   return (
-    <View style={{ flex: 1, marginTop: 73, backgroundColor: "white" }}>
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: 10,
-        }}
-      >
+    <>
+      <View style={{ flex: 1, backgroundColor: "white" }}>
+        {/* Header */}
         <View
           style={{
             flexDirection: "row",
+            justifyContent: "space-between",
             alignItems: "center",
-            borderRadius: 5,
+            paddingHorizontal: 15,
+            paddingVertical: 10,
           }}
         >
-          <View style={{ height: 70, width: 70, backgroundColor: "white" }}>
-            <Image
-              source={require("../../../assets/profile.png")}
-              style={{
-                width: 30,
-                height: 30,
-                borderRadius: 18,
-                marginRight: 10,
-              }}
-            />
+          <View
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              backgroundColor: "white",
+              borderRadius: 20,
+              paddingHorizontal: 15,
+              paddingVertical: 5,
+              borderWidth: 1,
+              borderColor: "#e0e0e0",
+            }}
+          >
+            <View style={{ marginRight: 10 }}>
+              <Image
+                source={require("../../../assets/profile.png")}
+                style={{
+                  width: 36,
+                  height: 36,
+                  borderRadius: 18,
+                }}
+              />
+            </View>
+
+            <View>
+              <Text style={{ fontWeight: "bold", fontSize: 16 }}>
+                Josh James
+              </Text>
+              <Text style={{ color: "gray", fontSize: 12 }}>Class - VII B</Text>
+            </View>
           </View>
-          <View>
-            <Text style={{ fontWeight: "bold", fontSize: 18 }}>Josh James</Text>
-            <Text style={{ color: "gray", fontSize: 10 }}>Class - VII B</Text>
-          </View>
+          <Pressable style={{ paddingRight: 10 }}>
+            <Fontisto name="bell" size={24} color="black" />
+          </Pressable>
         </View>
-        <Pressable style={{ paddingRight: 10 }}>
-          <Fontisto name="bell" size={24} color="black" />
-        </Pressable>
+
+        {/* School Information */}
+        <View
+          style={{
+            padding: 15,
+            borderWidth: 1,
+            borderRadius: 5,
+            borderColor: "#EAECF0",
+            backgroundColor: "white",
+            marginHorizontal: 15,
+            marginTop: 10,
+          }}
+        >
+          <Text style={{ fontSize: 12, fontWeight: "bold" }}>
+            Delhi Public School
+          </Text>
+          <Text style={{ fontSize: 10 }}>
+            Sector 13, Noida, Uttar Pradesh, India - 110029
+          </Text>
+        </View>
+
+        {/* Notice Board */}
+        <View
+          style={{
+            padding: 10,
+            flexDirection: "row",
+            justifyContent: "space-between",
+            backgroundColor: "white",
+            marginTop: 10,
+          }}
+        >
+          <Text style={{ fontSize: 18, fontWeight: "bold" }}>Notice Board</Text>
+          <AntDesign name="arrowright" size={24} color="black" />
+        </View>
+
+        {/* Scrollable notice cards */}
+        <ScrollView horizontal>
+          <View style={{ flexDirection: "row" }}>
+            <View
+              style={{
+                backgroundColor: "#D4FFEA",
+                height: 160,
+                width: 144,
+                marginHorizontal: 5,
+              }}
+            ></View>
+
+            <View
+              style={{
+                backgroundColor: "red",
+                height: 160,
+                width: 144,
+                marginHorizontal: 5,
+              }}
+            ></View>
+
+            <View
+              style={{
+                backgroundColor: "#D4FFEA",
+                height: 160,
+                width: 144,
+                marginHorizontal: 5,
+              }}
+            ></View>
+          </View>
+        </ScrollView>
+
+        {/* Attendance */}
+        <View
+          style={{
+            padding: 10,
+            flexDirection: "row",
+            justifyContent: "space-between",
+            backgroundColor: "white",
+            marginTop: 10,
+          }}
+        >
+          <Text style={{ fontSize: 18, fontWeight: "bold" }}>Attendance</Text>
+          <AntDesign name="arrowright" size={24} color="black" />
+        </View>
       </View>
-    </View>
+    </>
   );
 };
 
