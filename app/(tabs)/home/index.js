@@ -1,8 +1,30 @@
-import React from "react";
-import { Image, Pressable, ScrollView, Text, View } from "react-native";
+import React, { useState } from "react";
+import {
+  Image,
+  Pressable,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { AntDesign, Fontisto } from "@expo/vector-icons";
 
 const index = () => {
+  const [isChecked1, setIsChecked1] = useState(false);
+  const [isChecked2, setIsChecked2] = useState(false);
+  const [isChecked3, setIsChecked3] = useState(false);
+
+  const toggleCheckbox1 = () => {
+    setIsChecked1(!isChecked1);
+  };
+
+  const toggleCheckbox2 = () => {
+    setIsChecked2(!isChecked2);
+  };
+
+  const toggleCheckbox3 = () => {
+    setIsChecked3(!isChecked3);
+  };
   return (
     <>
       <View style={{ flex: 1, backgroundColor: "white" }}>
@@ -71,149 +93,162 @@ const index = () => {
         </View>
 
         <ScrollView>
+          {/* Notice Board */}
           <View
             style={{
               padding: 10,
-              flexDirection: "row",
+
               justifyContent: "space-between",
               backgroundColor: "white",
               marginTop: 10,
             }}
           >
-            <Text style={{ fontSize: 18, fontWeight: "bold" }}>
-              Notice Board
-            </Text>
-            <AntDesign name="arrowright" size={24} color="black" />
-          </View>
+            <View
+              style={{ flexDirection: "row", justifyContent: "space-between" }}
+            >
+              <Text style={{ fontSize: 18, fontWeight: "bold" }}>
+                Notice Board
+              </Text>
+              <AntDesign name="arrowright" size={24} color="black" />
+            </View>
 
-          <View style={{ paddingTop: 5, paddingLeft: 5 }}>
-            <ScrollView horizontal>
-              <View style={{ flexDirection: "row" }}>
-                <View
-                  style={{
-                    backgroundColor: "#D4FFEA",
-                    width: 160,
-                    marginHorizontal: 5,
-                    padding: 15,
-                    borderRadius: 10,
-                  }}
-                >
-                  <View style={{ padding: 10 }}>
-                    <Image source={require("../../../assets/nboard1.png")} />
-                    <View>
-                      <Text
-                        style={{
-                          fontSize: 12,
-                          fontWeight: "bold",
-                          marginTop: 10,
-                        }}
-                      >
-                        School is going for vacation in next week
-                      </Text>
+            <View style={{ paddingTop: 5, paddingLeft: 5 }}>
+              <ScrollView horizontal>
+                <View style={{ flexDirection: "row" }}>
+                  <View
+                    style={{
+                      backgroundColor: "#D4FFEA",
+                      width: 160,
+                      marginHorizontal: 5,
+                      padding: 15,
+                      borderRadius: 10,
+                    }}
+                  >
+                    <View style={{ padding: 10 }}>
+                      <Image source={require("../../../assets/nboard1.png")} />
+                      <View>
+                        <Text
+                          style={{
+                            fontSize: 12,
+                            fontWeight: "bold",
+                            marginTop: 10,
+                          }}
+                        >
+                          School is going for vacation in next week
+                        </Text>
 
-                      <Text
-                        style={{
-                          color: "#6C6C74",
-                          fontSize: 10,
-                          marginTop: 10,
-                        }}
-                      >
-                        02 March 2020 10.00 AM
-                      </Text>
+                        <Text
+                          style={{
+                            color: "#6C6C74",
+                            fontSize: 10,
+                            marginTop: 10,
+                          }}
+                        >
+                          02 March 2020 10.00 AM
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+
+                  <View
+                    style={{
+                      backgroundColor: "#D4F5FF",
+                      width: 160,
+                      marginHorizontal: 5,
+                      padding: 15,
+                      borderRadius: 10,
+                    }}
+                  >
+                    <View style={{ padding: 10 }}>
+                      <Image source={require("../../../assets/nboard2.png")} />
+                      <View>
+                        <Text
+                          style={{
+                            fontSize: 12,
+                            fontWeight: "bold",
+                            marginTop: 10,
+                          }}
+                        >
+                          School is going for vacation in next week
+                        </Text>
+
+                        <Text
+                          style={{
+                            color: "#6C6C74",
+                            fontSize: 10,
+                            marginTop: 10,
+                          }}
+                        >
+                          02 March 2020 10.00 AM
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+
+                  <View
+                    style={{
+                      backgroundColor: "#FFD4D4",
+                      width: 160,
+                      marginHorizontal: 5,
+                      padding: 15,
+                      borderRadius: 10,
+                    }}
+                  >
+                    <View style={{ padding: 10 }}>
+                      <Image source={require("../../../assets/nboard3.png")} />
+                      <View>
+                        <Text
+                          style={{
+                            fontSize: 12,
+                            fontWeight: "bold",
+                            marginTop: 10,
+                          }}
+                        >
+                          School is going for vacation in next week
+                        </Text>
+
+                        <Text
+                          style={{
+                            color: "#6C6C74",
+                            fontSize: 10,
+                            marginTop: 10,
+                          }}
+                        >
+                          02 March 2020 10.00 AM
+                        </Text>
+                      </View>
                     </View>
                   </View>
                 </View>
-
-                <View
-                  style={{
-                    backgroundColor: "#D4F5FF",
-                    width: 160,
-                    marginHorizontal: 5,
-                    padding: 15,
-                    borderRadius: 10,
-                  }}
-                >
-                  <View style={{ padding: 10 }}>
-                    <Image source={require("../../../assets/nboard2.png")} />
-                    <View>
-                      <Text
-                        style={{
-                          fontSize: 12,
-                          fontWeight: "bold",
-                          marginTop: 10,
-                        }}
-                      >
-                        School is going for vacation in next week
-                      </Text>
-
-                      <Text
-                        style={{
-                          color: "#6C6C74",
-                          fontSize: 10,
-                          marginTop: 10,
-                        }}
-                      >
-                        02 March 2020 10.00 AM
-                      </Text>
-                    </View>
-                  </View>
-                </View>
-
-                <View
-                  style={{
-                    backgroundColor: "#FFD4D4",
-                    width: 160,
-                    marginHorizontal: 5,
-                    padding: 15,
-                    borderRadius: 10,
-                  }}
-                >
-                  <View style={{ padding: 10 }}>
-                    <Image source={require("../../../assets/nboard3.png")} />
-                    <View>
-                      <Text
-                        style={{
-                          fontSize: 12,
-                          fontWeight: "bold",
-                          marginTop: 10,
-                        }}
-                      >
-                        School is going for vacation in next week
-                      </Text>
-
-                      <Text
-                        style={{
-                          color: "#6C6C74",
-                          fontSize: 10,
-                          marginTop: 10,
-                        }}
-                      >
-                        02 March 2020 10.00 AM
-                      </Text>
-                    </View>
-                  </View>
-                </View>
-              </View>
-            </ScrollView>
+              </ScrollView>
+            </View>
           </View>
 
           {/* Attendance */}
           <View
             style={{
               padding: 10,
-              flexDirection: "row",
               justifyContent: "space-between",
               backgroundColor: "white",
               marginTop: 10,
             }}
           >
-            <Text style={{ fontSize: 18, fontWeight: "bold" }}>Attendance</Text>
-            <AntDesign name="arrowright" size={24} color="black" />
-          </View>
-
-          <View>
-            <ScrollView horizontal>
-              <View style={{ flexDirection: "row" }}>
+            <View
+              style={{ flexDirection: "row", justifyContent: "space-between" }}
+            >
+              <Text style={{ fontSize: 18, fontWeight: "bold" }}>
+                Attendance
+              </Text>
+              <AntDesign name="arrowright" size={24} color="black" />
+            </View>
+            <View>
+              <View
+                style={{
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  paddingHorizontal: 15,
+                }}
+              >
                 <View
                   style={{
                     borderRadius: 10,
@@ -263,53 +298,327 @@ const index = () => {
                   </Text>
                 </View>
               </View>
-            </ScrollView>
+            </View>
           </View>
 
+          {/* Assignments */}
           <View
             style={{
               padding: 10,
-              flexDirection: "row",
               justifyContent: "space-between",
               backgroundColor: "white",
               marginTop: 10,
             }}
           >
-            <Text style={{ fontSize: 18, fontWeight: "bold" }}>Fees</Text>
-            <AntDesign name="arrowright" size={24} color="black" />
+            <View
+              style={{ flexDirection: "row", justifyContent: "space-between" }}
+            >
+              <Text style={{ fontSize: 18, fontWeight: "bold" }}>
+                Assignments
+              </Text>
+              <AntDesign name="arrowright" size={24} color="black" />
+            </View>
+
+            <View>
+              <ScrollView horizontal>
+                <View style={{ flexDirection: "row" }}>
+                  <View
+                    style={{
+                      backgroundColor: "#FFF1EC",
+                      borderRadius: 10,
+                      height: 160,
+                      width: 144,
+                      marginHorizontal: 5,
+                      padding: 10,
+                    }}
+                  >
+                    <TouchableOpacity
+                      style={{
+                        width: 36,
+                        height: 36,
+                        borderRadius: 18,
+                        backgroundColor: "white",
+                        borderWidth: 1,
+                        borderColor: isChecked1 ? "#007AFF" : "#AAA",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        marginBottom: 10,
+                      }}
+                      onPress={toggleCheckbox1}
+                    >
+                      {/* Round Checkbox */}
+                      {isChecked1 && (
+                        <View
+                          style={{
+                            width: 24,
+                            height: 24,
+                            borderRadius: 12,
+                            backgroundColor: "#007AFF",
+                          }}
+                        />
+                      )}
+                    </TouchableOpacity>
+
+                    <Text style={{ fontSize: 12, fontWeight: "bold" }}>
+                      Exercise Trigonometry 1st topic
+                    </Text>
+
+                    <Text
+                      style={{
+                        fontSize: 10,
+                        color: "#6C6C74",
+                        marginTop: "auto",
+                      }}
+                    >
+                      Maths / Today
+                    </Text>
+                  </View>
+
+                  <View
+                    style={{
+                      backgroundColor: "#FFF1EC",
+                      borderRadius: 10,
+                      height: 160,
+                      width: 144,
+                      marginHorizontal: 5,
+                      padding: 10,
+                    }}
+                  >
+                    <TouchableOpacity
+                      style={{
+                        width: 36,
+                        height: 36,
+                        borderRadius: 18,
+                        backgroundColor: "white",
+                        borderWidth: 1,
+                        borderColor: isChecked2 ? "#007AFF" : "#AAA",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        marginBottom: 10,
+                      }}
+                      onPress={toggleCheckbox2}
+                    >
+                      {/* Round Checkbox */}
+                      {isChecked2 && (
+                        <View
+                          style={{
+                            width: 24,
+                            height: 24,
+                            borderRadius: 12,
+                            backgroundColor: "#007AFF",
+                          }}
+                        />
+                      )}
+                    </TouchableOpacity>
+
+                    <Text style={{ fontSize: 12, fontWeight: "bold" }}>
+                      Hindi writing 3 pages
+                    </Text>
+
+                    <Text
+                      style={{
+                        fontSize: 10,
+                        color: "#6C6C74",
+                        marginTop: "auto",
+                      }}
+                    >
+                      Hindi / Yesterday
+                    </Text>
+                  </View>
+
+                  <View
+                    style={{
+                      backgroundColor: "#FFF1EC",
+                      borderRadius: 10,
+                      height: 160,
+                      width: 144,
+                      marginHorizontal: 5,
+                      padding: 10,
+                    }}
+                  >
+                    <TouchableOpacity
+                      style={{
+                        width: 36,
+                        height: 36,
+                        borderRadius: 18,
+                        backgroundColor: "white",
+                        borderWidth: 1,
+                        borderColor: isChecked3 ? "#007AFF" : "#AAA",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        marginBottom: 10,
+                      }}
+                      onPress={toggleCheckbox3}
+                    >
+                      {/* Round Checkbox */}
+                      {isChecked3 && (
+                        <View
+                          style={{
+                            width: 24,
+                            height: 24,
+                            borderRadius: 12,
+                            backgroundColor: "#007AFF",
+                          }}
+                        />
+                      )}
+                    </TouchableOpacity>
+
+                    <Text style={{ fontSize: 12, fontWeight: "bold" }}>
+                      Test for History first session
+                    </Text>
+
+                    <Text
+                      style={{
+                        fontSize: 10,
+                        color: "#6C6C74",
+                        marginTop: "auto",
+                      }}
+                    >
+                      Hindi / Yesterday
+                    </Text>
+                  </View>
+                </View>
+              </ScrollView>
+            </View>
           </View>
 
-          <View>
-            <ScrollView horizontal>
-              <View style={{ flexDirection: "row" }}>
+          {/* Fees */}
+          <View
+            style={{
+              padding: 10,
+              justifyContent: "space-between",
+              backgroundColor: "white",
+              marginTop: 10,
+            }}
+          >
+            <View
+              style={{ flexDirection: "row", justifyContent: "space-between" }}
+            >
+              <Text style={{ fontSize: 18, fontWeight: "bold" }}>Fees</Text>
+              <AntDesign name="arrowright" size={24} color="black" />
+            </View>
+            <View>
+              <ScrollView horizontal>
                 <View
                   style={{
-                    backgroundColor: "gray",
-                    height: 160,
-                    width: 144,
-                    marginHorizontal: 5,
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    paddingHorizontal: 15,
                   }}
-                ></View>
+                >
+                  <View
+                    style={{
+                      borderRadius: 10,
+                      borderColor: "#EAECF0",
+                      borderWidth: 1,
+                      width: 139,
+                      marginHorizontal: 5,
+                      padding: 15,
+                    }}
+                  >
+                    <Text
+                      style={{
+                        fontSize: 12,
+                        color: "#6C6C74",
+                        fontWeight: "500",
+                        marginBottom: 5,
+                      }}
+                    >
+                      6 May 2024
+                    </Text>
+                    <Text
+                      style={{
+                        fontSize: 12,
+                        color: "#6C6C74",
+                        marginBottom: 5,
+                      }}
+                    >
+                      School fees for January
+                    </Text>
 
-                <View
-                  style={{
-                    backgroundColor: "blue",
-                    height: 160,
-                    width: 144,
-                    marginHorizontal: 5,
-                  }}
-                ></View>
+                    <Text
+                      style={{ fontSize: 22, color: "#031639", marginTop: 5 }}
+                    >
+                      Rs. 14, 500
+                    </Text>
+                  </View>
 
-                <View
-                  style={{
-                    backgroundColor: "green",
-                    height: 160,
-                    width: 144,
-                    marginHorizontal: 5,
-                  }}
-                ></View>
-              </View>
-            </ScrollView>
+                  <View
+                    style={{
+                      borderRadius: 10,
+                      borderColor: "#EAECF0",
+                      borderWidth: 1,
+                      width: 139,
+                      marginHorizontal: 5,
+                      padding: 15,
+                    }}
+                  >
+                    <Text
+                      style={{
+                        fontSize: 12,
+                        color: "#6C6C74",
+                        fontWeight: "500",
+                        marginBottom: 5,
+                      }}
+                    >
+                      6 May 2024
+                    </Text>
+                    <Text
+                      style={{
+                        fontSize: 12,
+                        color: "#6C6C74",
+                        marginBottom: 5,
+                      }}
+                    >
+                      School fees for January
+                    </Text>
+
+                    <Text
+                      style={{ fontSize: 22, color: "#031639", marginTop: 5 }}
+                    >
+                      Rs. 14, 500
+                    </Text>
+                  </View>
+
+                  <View
+                    style={{
+                      borderRadius: 10,
+                      borderColor: "#EAECF0",
+                      borderWidth: 1,
+                      width: 139,
+                      marginHorizontal: 5,
+                      padding: 15,
+                    }}
+                  >
+                    <Text
+                      style={{
+                        fontSize: 12,
+                        color: "#6C6C74",
+                        fontWeight: "500",
+                        marginBottom: 5,
+                      }}
+                    >
+                      6 May 2024
+                    </Text>
+                    <Text
+                      style={{
+                        fontSize: 12,
+                        color: "#6C6C74",
+                        marginBottom: 5,
+                      }}
+                    >
+                      School fees for January
+                    </Text>
+
+                    <Text
+                      style={{ fontSize: 22, color: "#031639", marginTop: 5 }}
+                    >
+                      Rs. 14, 500
+                    </Text>
+                  </View>
+                </View>
+              </ScrollView>
+            </View>
           </View>
         </ScrollView>
       </View>
