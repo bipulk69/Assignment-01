@@ -51,7 +51,6 @@ const index = () => {
           </Pressable>
         </View>
 
-        {/* School Information */}
         <View
           style={{
             padding: 15,
@@ -71,65 +70,148 @@ const index = () => {
           </Text>
         </View>
 
-        {/* Notice Board */}
-        <View
-          style={{
-            padding: 10,
-            flexDirection: "row",
-            justifyContent: "space-between",
-            backgroundColor: "white",
-            marginTop: 10,
-          }}
-        >
-          <Text style={{ fontSize: 18, fontWeight: "bold" }}>Notice Board</Text>
-          <AntDesign name="arrowright" size={24} color="black" />
-        </View>
+        <ScrollView>
+          <View
+            style={{
+              padding: 10,
+              flexDirection: "row",
+              justifyContent: "space-between",
+              backgroundColor: "white",
+              marginTop: 10,
+            }}
+          >
+            <Text style={{ fontSize: 18, fontWeight: "bold" }}>
+              Notice Board
+            </Text>
+            <AntDesign name="arrowright" size={24} color="black" />
+          </View>
 
-        {/* Scrollable notice cards */}
-        <ScrollView horizontal>
-          <View style={{ flexDirection: "row" }}>
-            <View
-              style={{
-                backgroundColor: "#D4FFEA",
-                height: 160,
-                width: 144,
-                marginHorizontal: 5,
-              }}
-            ></View>
+          <View>
+            <ScrollView horizontal>
+              <View style={{ flexDirection: "row" }}>
+                <View
+                  style={{
+                    backgroundColor: "#D4FFEA",
+                    height: 160,
+                    width: 144,
+                    marginHorizontal: 5,
+                  }}
+                ></View>
 
-            <View
-              style={{
-                backgroundColor: "red",
-                height: 160,
-                width: 144,
-                marginHorizontal: 5,
-              }}
-            ></View>
+                <View
+                  style={{
+                    backgroundColor: "red",
+                    height: 160,
+                    width: 144,
+                    marginHorizontal: 5,
+                  }}
+                ></View>
 
-            <View
-              style={{
-                backgroundColor: "#D4FFEA",
-                height: 160,
-                width: 144,
-                marginHorizontal: 5,
-              }}
-            ></View>
+                <View
+                  style={{
+                    backgroundColor: "#D4FFEA",
+                    height: 160,
+                    width: 144,
+                    marginHorizontal: 5,
+                  }}
+                ></View>
+              </View>
+            </ScrollView>
+          </View>
+
+          {/* Attendance */}
+          <View
+            style={{
+              padding: 10,
+              flexDirection: "row",
+              justifyContent: "space-between",
+              backgroundColor: "white",
+              marginTop: 10,
+            }}
+          >
+            <Text style={{ fontSize: 18, fontWeight: "bold" }}>Attendance</Text>
+            <AntDesign name="arrowright" size={24} color="black" />
+          </View>
+
+          <View>
+            <ScrollView horizontal>
+              <View style={{ flexDirection: "row" }}>
+                <View
+                  style={{
+                    backgroundColor: "gray",
+                    height: 160,
+                    width: 144,
+                    marginHorizontal: 5,
+                  }}
+                ></View>
+
+                <View
+                  style={{
+                    backgroundColor: "blue",
+                    height: 160,
+                    width: 144,
+                    marginHorizontal: 5,
+                  }}
+                ></View>
+
+                <View
+                  style={{
+                    backgroundColor: "green",
+                    height: 160,
+                    width: 144,
+                    marginHorizontal: 5,
+                  }}
+                ></View>
+              </View>
+            </ScrollView>
+          </View>
+
+          <View
+            style={{
+              padding: 10,
+              flexDirection: "row",
+              justifyContent: "space-between",
+              backgroundColor: "white",
+              marginTop: 10,
+            }}
+          >
+            <Text style={{ fontSize: 18, fontWeight: "bold" }}>Fees</Text>
+            <AntDesign name="arrowright" size={24} color="black" />
+          </View>
+
+          <View>
+            <ScrollView horizontal>
+              <View style={{ flexDirection: "row" }}>
+                <View
+                  style={{
+                    backgroundColor: "gray",
+                    height: 160,
+                    width: 144,
+                    marginHorizontal: 5,
+                  }}
+                ></View>
+
+                <View
+                  style={{
+                    backgroundColor: "blue",
+                    height: 160,
+                    width: 144,
+                    marginHorizontal: 5,
+                  }}
+                ></View>
+
+                <View
+                  style={{
+                    backgroundColor: "green",
+                    height: 160,
+                    width: 144,
+                    marginHorizontal: 5,
+                  }}
+                ></View>
+              </View>
+            </ScrollView>
           </View>
         </ScrollView>
-
-        {/* Attendance */}
-        <View
-          style={{
-            padding: 10,
-            flexDirection: "row",
-            justifyContent: "space-between",
-            backgroundColor: "white",
-            marginTop: 10,
-          }}
-        >
-          <Text style={{ fontSize: 18, fontWeight: "bold" }}>Attendance</Text>
-          <AntDesign name="arrowright" size={24} color="black" />
-        </View>
       </View>
     </>
   );

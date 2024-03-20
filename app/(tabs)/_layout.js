@@ -107,7 +107,7 @@ export default function Layout() {
             ) : (
               <MaterialCommunityIcons
                 name="face-man-profile"
-                size={24}
+                size={30}
                 color="#6c6c74"
               />
             );
