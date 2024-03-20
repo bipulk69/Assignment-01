@@ -86,35 +86,113 @@ const index = () => {
             <AntDesign name="arrowright" size={24} color="black" />
           </View>
 
-          <View>
+          <View style={{ paddingTop: 5, paddingLeft: 5 }}>
             <ScrollView horizontal>
               <View style={{ flexDirection: "row" }}>
                 <View
                   style={{
                     backgroundColor: "#D4FFEA",
-                    height: 160,
-                    width: 144,
+                    width: 160,
                     marginHorizontal: 5,
+                    padding: 15,
+                    borderRadius: 10,
                   }}
-                ></View>
+                >
+                  <View style={{ padding: 10 }}>
+                    <Image source={require("../../../assets/nboard1.png")} />
+                    <View>
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: "bold",
+                          marginTop: 10,
+                        }}
+                      >
+                        School is going for vacation in next week
+                      </Text>
+
+                      <Text
+                        style={{
+                          color: "#6C6C74",
+                          fontSize: 10,
+                          marginTop: 10,
+                        }}
+                      >
+                        02 March 2020 10.00 AM
+                      </Text>
+                    </View>
+                  </View>
+                </View>
 
                 <View
                   style={{
-                    backgroundColor: "red",
-                    height: 160,
-                    width: 144,
+                    backgroundColor: "#D4F5FF",
+                    width: 160,
                     marginHorizontal: 5,
+                    padding: 15,
+                    borderRadius: 10,
                   }}
-                ></View>
+                >
+                  <View style={{ padding: 10 }}>
+                    <Image source={require("../../../assets/nboard2.png")} />
+                    <View>
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: "bold",
+                          marginTop: 10,
+                        }}
+                      >
+                        School is going for vacation in next week
+                      </Text>
+
+                      <Text
+                        style={{
+                          color: "#6C6C74",
+                          fontSize: 10,
+                          marginTop: 10,
+                        }}
+                      >
+                        02 March 2020 10.00 AM
+                      </Text>
+                    </View>
+                  </View>
+                </View>
 
                 <View
                   style={{
-                    backgroundColor: "#D4FFEA",
-                    height: 160,
-                    width: 144,
+                    backgroundColor: "#FFD4D4",
+                    width: 160,
                     marginHorizontal: 5,
+                    padding: 15,
+                    borderRadius: 10,
                   }}
-                ></View>
+                >
+                  <View style={{ padding: 10 }}>
+                    <Image source={require("../../../assets/nboard3.png")} />
+                    <View>
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: "bold",
+                          marginTop: 10,
+                        }}
+                      >
+                        School is going for vacation in next week
+                      </Text>
+
+                      <Text
+                        style={{
+                          color: "#6C6C74",
+                          fontSize: 10,
+                          marginTop: 10,
+                        }}
+                      >
+                        02 March 2020 10.00 AM
+                      </Text>
+                    </View>
+                  </View>
+                </View>
               </View>
             </ScrollView>
           </View>
@@ -138,30 +216,52 @@ const index = () => {
               <View style={{ flexDirection: "row" }}>
                 <View
                   style={{
-                    backgroundColor: "gray",
-                    height: 160,
-                    width: 144,
+                    borderRadius: 10,
+                    borderColor: "#EAECF0",
+                    borderWidth: 1,
+                    width: 105,
                     marginHorizontal: 5,
+                    padding: 10,
+                    alignItems: "center",
                   }}
-                ></View>
+                >
+                  <Text style={{ fontSize: 23, color: "#12B264" }}>23</Text>
+                  <Text style={{ fontSize: 10, color: "#12B264" }}>
+                    Present
+                  </Text>
+                </View>
 
                 <View
                   style={{
-                    backgroundColor: "blue",
-                    height: 160,
-                    width: 144,
+                    borderRadius: 10,
+                    borderColor: "#EAECF0",
+                    borderWidth: 1,
+                    width: 105,
                     marginHorizontal: 5,
+                    padding: 10,
+                    alignItems: "center",
                   }}
-                ></View>
+                >
+                  <Text style={{ fontSize: 23, color: "FF0000" }}>23</Text>
+                  <Text style={{ fontSize: 10, color: "#FF0000" }}>Absent</Text>
+                </View>
 
                 <View
                   style={{
-                    backgroundColor: "green",
-                    height: 160,
-                    width: 144,
+                    borderRadius: 10,
+                    borderColor: "#EAECF0",
+                    borderWidth: 1,
+                    width: 105,
                     marginHorizontal: 5,
+                    padding: 10,
+                    alignItems: "center",
                   }}
-                ></View>
+                >
+                  <Text style={{ fontSize: 23, color: "#0075FF" }}>23</Text>
+                  <Text style={{ fontSize: 10, color: "#0075FF" }}>
+                    Holiday
+                  </Text>
+                </View>
               </View>
             </ScrollView>
           </View>
