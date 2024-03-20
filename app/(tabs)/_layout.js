@@ -6,7 +6,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export default function Layout() {
   return (
-    <Tabs tabBarStyle={styles.tabBar}>
+    <Tabs>
       <Tabs.Screen
         name="home"
         options={{
@@ -18,6 +18,12 @@ export default function Layout() {
             ) : (
               <Feather name="home" size={24} color="#6C6C74" />
             );
+          },
+          tabBarItemStyle: {
+            justifyContent: "center",
+            alignItems: "center",
+            height: 60,
+            width: 60,
           },
         }}
       />
@@ -34,6 +40,12 @@ export default function Layout() {
               <AntDesign name="contacts" size={24} color="#6C6C74" />
             );
           },
+          tabBarItemStyle: {
+            justifyContent: "center",
+            alignItems: "center",
+            height: 60,
+            width: 60,
+          },
         }}
       />
 
@@ -42,12 +54,19 @@ export default function Layout() {
         options={{
           tabBarLabel: "",
           headerShown: false,
-          tabBarIcon: ({ focused }) => {
-            return focused ? (
-              <AntDesign name="pluscircle" size={42} color="black" />
-            ) : (
-              <AntDesign name="pluscircle" size={42} color="black" />
-            );
+          tabBarIcon: ({ focused }) => (
+            <AntDesign
+              name="pluscircle"
+              size={focused ? 42 : 42}
+              color="black"
+            />
+          ),
+
+          tabBarItemStyle: {
+            justifyContent: "center",
+            alignItems: "center",
+            height: 60,
+            width: 60,
           },
         }}
       />
@@ -63,6 +82,12 @@ export default function Layout() {
             ) : (
               <AntDesign name="message1" size={24} color="#6c6c74" />
             );
+          },
+          tabBarItemStyle: {
+            justifyContent: "center",
+            alignItems: "center",
+            height: 60,
+            width: 60,
           },
         }}
       />
@@ -87,10 +112,18 @@ export default function Layout() {
               />
             );
           },
+          tabBarItemStyle: {
+            justifyContent: "center",
+            alignItems: "center",
+            height: 60,
+            width: 60,
+          },
         }}
       />
     </Tabs>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  tabBar: { backgroundColor: "red" },
+});
