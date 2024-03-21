@@ -3,12 +3,18 @@ import React from "react";
 
 const index = () => {
   return (
-    <View>
-      <Text>Profile</Text>
+    <View style={styles.container}>
+      <Text>Profile's Screen</Text>
     </View>
   );
 };
 
 export default index;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});

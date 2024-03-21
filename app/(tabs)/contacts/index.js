@@ -3,12 +3,18 @@ import React from "react";
 
 const index = () => {
   return (
-    <View>
-      <Text>Contacts</Text>
+    <View style={styles.container}>
+      <Text>Contact's Screen</Text>
     </View>
   );
 };
 
 export default index;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});

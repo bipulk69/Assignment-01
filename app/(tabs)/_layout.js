@@ -3,7 +3,6 @@ import { Feather } from "@expo/vector-icons";
 import { View, StyleSheet } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { FontAwesome6 } from "@expo/vector-icons";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export default function Layout() {
   return (
@@ -102,7 +101,7 @@ export default function Layout() {
             return focused ? (
               <FontAwesome6 name="user-circle" size={24} color="#0075ff" />
             ) : (
-              <FontAwesome6 name="user-circle" size={24} color="#6c6c74r" />
+              <FontAwesome6 name="user-circle" size={24} color="#6c6c74" />
             );
           },
           tabBarItemStyle: {
