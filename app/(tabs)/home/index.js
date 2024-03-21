@@ -190,7 +190,7 @@ const index = () => {
             <View style={{ paddingTop: 5, paddingLeft: 5 }}>
               <ScrollView horizontal>
                 <View style={{ flexDirection: "row" }}>
-                  <View
+                  <Pressable
                     style={{
                       backgroundColor: "#D4FFEA",
                       width: 160,
@@ -223,9 +223,9 @@ const index = () => {
                         </Text>
                       </View>
                     </View>
-                  </View>
+                  </Pressable>
 
-                  <View
+                  <Pressable
                     style={{
                       backgroundColor: "#D4F5FF",
                       width: 160,
@@ -258,9 +258,9 @@ const index = () => {
                         </Text>
                       </View>
                     </View>
-                  </View>
+                  </Pressable>
 
-                  <View
+                  <Pressable
                     style={{
                       backgroundColor: "#FFD4D4",
                       width: 160,
@@ -293,7 +293,7 @@ const index = () => {
                         </Text>
                       </View>
                     </View>
-                  </View>
+                  </Pressable>
                 </View>
               </ScrollView>
             </View>
