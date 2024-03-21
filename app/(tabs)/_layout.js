@@ -2,6 +2,7 @@ import { Tabs } from "expo-router";
 import { Feather } from "@expo/vector-icons";
 import { View, StyleSheet } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
+import { FontAwesome6 } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export default function Layout() {
@@ -99,17 +100,9 @@ export default function Layout() {
           headerShown: false,
           tabBarIcon: ({ focused }) => {
             return focused ? (
-              <MaterialCommunityIcons
-                name="face-man-profile"
-                size={24}
-                color="#0075ff"
-              />
+              <FontAwesome6 name="user-circle" size={24} color="#0075ff" />
             ) : (
-              <MaterialCommunityIcons
-                name="face-man-profile"
-                size={30}
-                color="#6c6c74"
-              />
+              <FontAwesome6 name="user-circle" size={24} color="#6c6c74r" />
             );
           },
           tabBarItemStyle: {

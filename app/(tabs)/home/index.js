@@ -25,6 +25,70 @@ const index = () => {
   const toggleCheckbox3 = () => {
     setIsChecked3(!isChecked3);
   };
+
+  const AssignmentItem = ({
+    isChecked,
+    toggleCheckbox,
+    title,
+    subject,
+    date,
+  }) => {
+    return (
+      <View
+        style={{
+          backgroundColor: isChecked ? "#FFF1EC" : "#FFF1EC",
+          borderRadius: 10,
+          height: 160,
+          width: 144,
+          marginHorizontal: 5,
+          padding: 10,
+        }}
+      >
+        <TouchableOpacity
+          style={{
+            width: 36,
+            height: 36,
+            borderRadius: 18,
+            backgroundColor: isChecked ? "#007AFF" : "white",
+            borderWidth: 1,
+            borderColor: isChecked ? "#007AFF" : "#AAA",
+            justifyContent: "center",
+            alignItems: "center",
+            marginBottom: 10,
+          }}
+          onPress={toggleCheckbox}
+        >
+          {/* Round Checkbox */}
+          {isChecked && (
+            <View
+              style={{
+                width: 24,
+                height: 24,
+                borderRadius: 12,
+                backgroundColor: "#0075FF",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <AntDesign name="check" size={16} color="#FFFFFF" />
+            </View>
+          )}
+        </TouchableOpacity>
+
+        <Text style={{ fontSize: 12, fontWeight: "bold" }}>{title}</Text>
+
+        <Text
+          style={{
+            fontSize: 10,
+            color: "#6C6C74",
+            marginTop: "auto",
+          }}
+        >
+          {subject} / {date}
+        </Text>
+      </View>
+    );
+  };
   return (
     <>
       <View style={{ flex: 1, backgroundColor: "white" }}>
@@ -46,17 +110,26 @@ const index = () => {
               borderRadius: 20,
               paddingHorizontal: 15,
               paddingVertical: 5,
-              borderWidth: 1,
-              borderColor: "#e0e0e0",
             }}
           >
-            <View style={{ marginRight: 10 }}>
+            <View
+              style={{
+                height: 48,
+                width: 48,
+                marginRight: 10,
+                borderWidth: 1,
+                borderColor: "#e0e0e0",
+                borderRadius: 10,
+                alignItems: "center",
+                justifyContent: "center",
+                padding: 5,
+              }}
+            >
               <Image
                 source={require("../../../assets/profile.png")}
                 style={{
-                  width: 36,
-                  height: 36,
-                  borderRadius: 18,
+                  width: 32,
+                  height: 32,
                 }}
               />
             </View>
@@ -109,7 +182,9 @@ const index = () => {
               <Text style={{ fontSize: 18, fontWeight: "bold" }}>
                 Notice Board
               </Text>
-              <AntDesign name="arrowright" size={24} color="black" />
+              <Pressable>
+                <AntDesign name="arrowright" size={24} color="black" />
+              </Pressable>
             </View>
 
             <View style={{ paddingTop: 5, paddingLeft: 5 }}>
@@ -239,7 +314,9 @@ const index = () => {
               <Text style={{ fontSize: 18, fontWeight: "bold" }}>
                 Attendance
               </Text>
-              <AntDesign name="arrowright" size={24} color="black" />
+              <Pressable>
+                <AntDesign name="arrowright" size={24} color="black" />
+              </Pressable>
             </View>
             <View>
               <View
@@ -277,7 +354,7 @@ const index = () => {
                     alignItems: "center",
                   }}
                 >
-                  <Text style={{ fontSize: 23, color: "FF0000" }}>23</Text>
+                  <Text style={{ fontSize: 23, color: "#FF0000" }}>23</Text>
                   <Text style={{ fontSize: 10, color: "#FF0000" }}>Absent</Text>
                 </View>
 
@@ -316,167 +393,40 @@ const index = () => {
               <Text style={{ fontSize: 18, fontWeight: "bold" }}>
                 Assignments
               </Text>
-              <AntDesign name="arrowright" size={24} color="black" />
+              <Pressable>
+                <AntDesign name="arrowright" size={24} color="black" />
+              </Pressable>
             </View>
 
             <View>
               <ScrollView horizontal>
                 <View style={{ flexDirection: "row" }}>
-                  <View
-                    style={{
-                      backgroundColor: "#FFF1EC",
-                      borderRadius: 10,
-                      height: 160,
-                      width: 144,
-                      marginHorizontal: 5,
-                      padding: 10,
-                    }}
-                  >
-                    <TouchableOpacity
-                      style={{
-                        width: 36,
-                        height: 36,
-                        borderRadius: 18,
-                        backgroundColor: "white",
-                        borderWidth: 1,
-                        borderColor: isChecked1 ? "#007AFF" : "#AAA",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        marginBottom: 10,
-                      }}
-                      onPress={toggleCheckbox1}
-                    >
-                      {/* Round Checkbox */}
-                      {isChecked1 && (
-                        <View
-                          style={{
-                            width: 24,
-                            height: 24,
-                            borderRadius: 12,
-                            backgroundColor: "#007AFF",
-                          }}
-                        />
-                      )}
-                    </TouchableOpacity>
+                  {/* Assignment 1 */}
+                  <AssignmentItem
+                    isChecked={isChecked1}
+                    toggleCheckbox={toggleCheckbox1}
+                    title="Exercise Trigonometry 1st topic"
+                    subject="Maths"
+                    date="Today"
+                  />
 
-                    <Text style={{ fontSize: 12, fontWeight: "bold" }}>
-                      Exercise Trigonometry 1st topic
-                    </Text>
+                  {/* Assignment 2 */}
+                  <AssignmentItem
+                    isChecked={isChecked2}
+                    toggleCheckbox={toggleCheckbox2}
+                    title="Hindi writing 3 pages"
+                    subject="Hindi"
+                    date="Yesterday"
+                  />
 
-                    <Text
-                      style={{
-                        fontSize: 10,
-                        color: "#6C6C74",
-                        marginTop: "auto",
-                      }}
-                    >
-                      Maths / Today
-                    </Text>
-                  </View>
-
-                  <View
-                    style={{
-                      backgroundColor: "#FFF1EC",
-                      borderRadius: 10,
-                      height: 160,
-                      width: 144,
-                      marginHorizontal: 5,
-                      padding: 10,
-                    }}
-                  >
-                    <TouchableOpacity
-                      style={{
-                        width: 36,
-                        height: 36,
-                        borderRadius: 18,
-                        backgroundColor: "white",
-                        borderWidth: 1,
-                        borderColor: isChecked2 ? "#007AFF" : "#AAA",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        marginBottom: 10,
-                      }}
-                      onPress={toggleCheckbox2}
-                    >
-                      {/* Round Checkbox */}
-                      {isChecked2 && (
-                        <View
-                          style={{
-                            width: 24,
-                            height: 24,
-                            borderRadius: 12,
-                            backgroundColor: "#007AFF",
-                          }}
-                        />
-                      )}
-                    </TouchableOpacity>
-
-                    <Text style={{ fontSize: 12, fontWeight: "bold" }}>
-                      Hindi writing 3 pages
-                    </Text>
-
-                    <Text
-                      style={{
-                        fontSize: 10,
-                        color: "#6C6C74",
-                        marginTop: "auto",
-                      }}
-                    >
-                      Hindi / Yesterday
-                    </Text>
-                  </View>
-
-                  <View
-                    style={{
-                      backgroundColor: "#FFF1EC",
-                      borderRadius: 10,
-                      height: 160,
-                      width: 144,
-                      marginHorizontal: 5,
-                      padding: 10,
-                    }}
-                  >
-                    <TouchableOpacity
-                      style={{
-                        width: 36,
-                        height: 36,
-                        borderRadius: 18,
-                        backgroundColor: "white",
-                        borderWidth: 1,
-                        borderColor: isChecked3 ? "#007AFF" : "#AAA",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        marginBottom: 10,
-                      }}
-                      onPress={toggleCheckbox3}
-                    >
-                      {/* Round Checkbox */}
-                      {isChecked3 && (
-                        <View
-                          style={{
-                            width: 24,
-                            height: 24,
-                            borderRadius: 12,
-                            backgroundColor: "#007AFF",
-                          }}
-                        />
-                      )}
-                    </TouchableOpacity>
-
-                    <Text style={{ fontSize: 12, fontWeight: "bold" }}>
-                      Test for History first session
-                    </Text>
-
-                    <Text
-                      style={{
-                        fontSize: 10,
-                        color: "#6C6C74",
-                        marginTop: "auto",
-                      }}
-                    >
-                      Hindi / Yesterday
-                    </Text>
-                  </View>
+                  {/* Assignment 3 */}
+                  <AssignmentItem
+                    isChecked={isChecked3}
+                    toggleCheckbox={toggleCheckbox3}
+                    title="Test for History first session"
+                    subject="History"
+                    date="Yesterday"
+                  />
                 </View>
               </ScrollView>
             </View>
@@ -495,7 +445,9 @@ const index = () => {
               style={{ flexDirection: "row", justifyContent: "space-between" }}
             >
               <Text style={{ fontSize: 18, fontWeight: "bold" }}>Fees</Text>
-              <AntDesign name="arrowright" size={24} color="black" />
+              <Pressable>
+                <AntDesign name="arrowright" size={24} color="black" />
+              </Pressable>
             </View>
             <View>
               <ScrollView horizontal>
