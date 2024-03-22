@@ -42,6 +42,8 @@ const index = () => {
           height: 160,
           width: 144,
           marginHorizontal: 5,
+          borderWidth: 1,
+          borderColor: "#EAECF0",
           padding: 10,
         }}
       >
