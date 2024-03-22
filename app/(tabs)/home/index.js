@@ -8,6 +8,7 @@ import {
   View,
 } from "react-native";
 import { AntDesign, Fontisto } from "@expo/vector-icons";
+import { StatusBar } from "expo-status-bar";
 
 const index = () => {
   const [isChecked1, setIsChecked1] = useState(false);
@@ -207,7 +208,7 @@ const index = () => {
                         <Text
                           style={{
                             fontSize: 12,
-                            fontWeight: "bold",
+                            fontWeight: "700",
                             marginTop: 10,
                           }}
                         >
@@ -219,6 +220,7 @@ const index = () => {
                             color: "#6C6C74",
                             fontSize: 10,
                             marginTop: 10,
+                            fontWeight: "500",
                           }}
                         >
                           02 March 2020 10.00 AM
@@ -242,7 +244,7 @@ const index = () => {
                         <Text
                           style={{
                             fontSize: 12,
-                            fontWeight: "bold",
+                            fontWeight: "700",
                             marginTop: 10,
                           }}
                         >
@@ -254,6 +256,7 @@ const index = () => {
                             color: "#6C6C74",
                             fontSize: 10,
                             marginTop: 10,
+                            fontWeight: "500",
                           }}
                         >
                           02 March 2020 10.00 AM
@@ -277,7 +280,7 @@ const index = () => {
                         <Text
                           style={{
                             fontSize: 12,
-                            fontWeight: "bold",
+                            fontWeight: "700",
                             marginTop: 10,
                           }}
                         >
@@ -289,6 +292,7 @@ const index = () => {
                             color: "#6C6C74",
                             fontSize: 10,
                             marginTop: 10,
+                            fontWeight: "500",
                           }}
                         >
                           02 March 2020 10.00 AM
@@ -317,9 +321,21 @@ const index = () => {
                 marginLeft: 10,
               }}
             >
-              <Text style={{ fontSize: 18, fontWeight: "bold" }}>
-                Attendance
-              </Text>
+              <View style={{ flexDirection: "row", alignItems: "baseline" }}>
+                <Text style={{ fontSize: 18, fontWeight: "bold" }}>
+                  Attendance
+                </Text>
+                <Text
+                  style={{
+                    color: "#6C6C74",
+                    fontSize: 9,
+                    marginLeft: 3,
+                    fontWeight: "400",
+                  }}
+                >
+                  (This Month)
+                </Text>
+              </View>
               <Pressable style={{ marginRight: 10 }}>
                 <AntDesign name="arrowright" size={24} color="black" />
               </Pressable>
@@ -470,6 +486,7 @@ const index = () => {
                     justifyContent: "space-between",
                     marginLeft: 10,
                     marginTop: 10,
+                    alignItems: "center",
                   }}
                 >
                   <View
@@ -477,7 +494,7 @@ const index = () => {
                       borderRadius: 10,
                       borderColor: "#EAECF0",
                       borderWidth: 1,
-                      width: 139,
+                      width: 140,
                       marginHorizontal: 5,
                       padding: 15,
                     }}
@@ -588,6 +605,8 @@ const index = () => {
           </View>
         </ScrollView>
       </View>
+
+      <StatusBar style="auto" />
     </>
   );
 };
