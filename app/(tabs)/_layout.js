@@ -116,6 +116,4 @@ export default function Layout() {
   );
 }
 
-const styles = StyleSheet.create({
-  tabBar: { backgroundColor: "red" },
-});
+const styles = StyleSheet.create({});

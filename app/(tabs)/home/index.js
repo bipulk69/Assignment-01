@@ -75,7 +75,9 @@ const index = () => {
           )}
         </TouchableOpacity>
 
-        <Text style={{ fontSize: 12, fontWeight: "bold" }}>{title}</Text>
+        <Text style={{ fontSize: 12, fontWeight: "700", color: "#031639" }}>
+          {title}
+        </Text>
 
         <Text
           style={{
@@ -100,6 +102,7 @@ const index = () => {
             alignItems: "center",
             paddingHorizontal: 15,
             paddingVertical: 10,
+            marginBottom: 10,
           }}
         >
           <View
@@ -165,15 +168,14 @@ const index = () => {
           </Text>
         </View>
 
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
           {/* Notice Board */}
           <View
             style={{
-              padding: 10,
-
               justifyContent: "space-between",
               backgroundColor: "white",
               marginTop: 10,
+              marginLeft: 10,
             }}
           >
             <View
@@ -182,19 +184,19 @@ const index = () => {
               <Text style={{ fontSize: 18, fontWeight: "bold" }}>
                 Notice Board
               </Text>
-              <Pressable>
+              <Pressable style={{ marginRight: 10 }}>
                 <AntDesign name="arrowright" size={24} color="black" />
               </Pressable>
             </View>
 
-            <View style={{ paddingTop: 5, paddingLeft: 5 }}>
-              <ScrollView horizontal>
+            <View style={{ marginTop: 10 }}>
+              <ScrollView horizontal showsHorizontalScrollIndicator={false}>
                 <View style={{ flexDirection: "row" }}>
                   <Pressable
                     style={{
                       backgroundColor: "#D4FFEA",
                       width: 160,
-                      marginHorizontal: 5,
+                      marginRight: 5,
                       padding: 15,
                       borderRadius: 10,
                     }}
@@ -302,19 +304,23 @@ const index = () => {
           {/* Attendance */}
           <View
             style={{
-              padding: 10,
               justifyContent: "space-between",
               backgroundColor: "white",
               marginTop: 10,
+              marginBottom: 10,
             }}
           >
             <View
-              style={{ flexDirection: "row", justifyContent: "space-between" }}
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+                marginLeft: 10,
+              }}
             >
               <Text style={{ fontSize: 18, fontWeight: "bold" }}>
                 Attendance
               </Text>
-              <Pressable>
+              <Pressable style={{ marginRight: 10 }}>
                 <AntDesign name="arrowright" size={24} color="black" />
               </Pressable>
             </View>
@@ -323,7 +329,7 @@ const index = () => {
                 style={{
                   flexDirection: "row",
                   justifyContent: "space-between",
-                  paddingHorizontal: 15,
+                  marginRight: 10,
                 }}
               >
                 <View
@@ -332,9 +338,10 @@ const index = () => {
                     borderColor: "#EAECF0",
                     borderWidth: 1,
                     width: 105,
-                    marginHorizontal: 5,
                     padding: 10,
                     alignItems: "center",
+                    marginTop: 10,
+                    marginHorizontal: 10,
                   }}
                 >
                   <Text style={{ fontSize: 23, color: "#12B264" }}>23</Text>
@@ -349,7 +356,8 @@ const index = () => {
                     borderColor: "#EAECF0",
                     borderWidth: 1,
                     width: 105,
-                    marginHorizontal: 5,
+                    marginHorizontal: 10,
+                    marginTop: 10,
                     padding: 10,
                     alignItems: "center",
                   }}
@@ -364,7 +372,8 @@ const index = () => {
                     borderColor: "#EAECF0",
                     borderWidth: 1,
                     width: 105,
-                    marginHorizontal: 5,
+                    marginHorizontal: 10,
+                    marginTop: 10,
                     padding: 10,
                     alignItems: "center",
                   }}
@@ -381,14 +390,18 @@ const index = () => {
           {/* Assignments */}
           <View
             style={{
-              padding: 10,
               justifyContent: "space-between",
               backgroundColor: "white",
               marginTop: 10,
+              marginBottom: 10,
             }}
           >
             <View
-              style={{ flexDirection: "row", justifyContent: "space-between" }}
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+                marginHorizontal: 10,
+              }}
             >
               <Text style={{ fontSize: 18, fontWeight: "bold" }}>
                 Assignments
@@ -398,10 +411,9 @@ const index = () => {
               </Pressable>
             </View>
 
-            <View>
-              <ScrollView horizontal>
-                <View style={{ flexDirection: "row" }}>
-                  {/* Assignment 1 */}
+            <View style={{ marginTop: 10 }}>
+              <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                <View style={{ flexDirection: "row", marginLeft: 10 }}>
                   <AssignmentItem
                     isChecked={isChecked1}
                     toggleCheckbox={toggleCheckbox1}
@@ -410,7 +422,6 @@ const index = () => {
                     date="Today"
                   />
 
-                  {/* Assignment 2 */}
                   <AssignmentItem
                     isChecked={isChecked2}
                     toggleCheckbox={toggleCheckbox2}
@@ -419,7 +430,6 @@ const index = () => {
                     date="Yesterday"
                   />
 
-                  {/* Assignment 3 */}
                   <AssignmentItem
                     isChecked={isChecked3}
                     toggleCheckbox={toggleCheckbox3}
@@ -435,14 +445,17 @@ const index = () => {
           {/* Fees */}
           <View
             style={{
-              padding: 10,
               justifyContent: "space-between",
               backgroundColor: "white",
               marginTop: 10,
             }}
           >
             <View
-              style={{ flexDirection: "row", justifyContent: "space-between" }}
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+                marginHorizontal: 10,
+              }}
             >
               <Text style={{ fontSize: 18, fontWeight: "bold" }}>Fees</Text>
               <Pressable>
@@ -450,12 +463,13 @@ const index = () => {
               </Pressable>
             </View>
             <View>
-              <ScrollView horizontal>
+              <ScrollView horizontal showsHorizontalScrollIndicator={false}>
                 <View
                   style={{
                     flexDirection: "row",
                     justifyContent: "space-between",
-                    paddingHorizontal: 15,
+                    marginLeft: 10,
+                    marginTop: 10,
                   }}
                 >
                   <View
