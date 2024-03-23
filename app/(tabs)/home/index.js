@@ -608,7 +608,7 @@ const index = () => {
         </ScrollView>
       </View>
 
-      <StatusBar style="auto" />
+      <StatusBar style="dark" />
     </>
   );
 };
