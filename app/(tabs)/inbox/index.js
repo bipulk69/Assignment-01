@@ -5,6 +5,7 @@ const index = () => {
   return (
     <View style={styles.container}>
       <Text>Inbox's Screen</Text>
+      <View></View>
     </View>
   );
 };
